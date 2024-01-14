@@ -1,0 +1,85 @@
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.post-header button {
+    background-color: rgb(224, 110, 69);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.post-header button:hover {
+    background-color: rgba(224, 110, 69, 0.8);
+}
+
+.post-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inner-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #b4b4b4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 24px 23px 44px -15px rgba(0, 0, 0, 0.26);
+    -webkit-box-shadow: 24px 23px 44px -15px rgba(0, 0, 0, 0.26);
+    -moz-box-shadow: 24px 23px 44px -15px rgba(0, 0, 0, 0.26);
+}
+
+.posts-all {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+}
+
+section:nth-of-type(1) {
+    margin-bottom: 48px;
+}
+
+section:nth-of-type(1) div {
+    padding: 16px;
+    border: #b4b4b4 1px solid;
+    display: flex;
+    border-radius: 8px;
+    gap: 8px;
+}
+
+section:nth-of-type(1) div * {
+    border-radius: 4px;
+    padding: 8px 16px;
+}
+
+section:nth-of-type(1) div input {
+    flex: 2;
+    border: #b4b4b4 1px solid;
+    outline: none;
+}
+
+section:nth-of-type(1) div button {
+    flex: 1;
+    border: #b4b4b4 1px solid;
+    background-color: rgb(224, 110, 69);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+section:nth-of-type(1) div button:hover {
+    background-color: rgba(224, 110, 69, 0.8);
+}
+
+img {
+    max-width: 512px;
+    max-height: 512px;
+}

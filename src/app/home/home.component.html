@@ -1,0 +1,32 @@
+
+<main class="mainbody">
+    <h1>Red social Jala</h1>
+    <section>
+      <h2>¿Qué estás pensando?</h2>
+      <div>
+        <input type="text"
+         [(ngModel)]="post.text" 
+         placeholder="Titulo" />
+        <input
+          type="text"
+          [(ngModel)]="post.image_url"
+          placeholder="URL de la imagen"
+        />
+        <button (click)="createPost()">Publicar</button>
+      </div>
+    </section>
+    <section class="posts-all">
+      <div class="post-item" *ngFor="let post of posts">
+        <div class="inner-post">
+          <div class="post-header">
+            <h2>{{ post.text }}</h2>
+            <button (click)="deletePost(post.id)" *ngIf="post.user_id == user">
+              X
+            </button>
+          </div>
+          <img src="{{ post.image_url }}" alt="imagen del post" />
+        </div>
+      </div>
+    </section>
+  </main>
+  
