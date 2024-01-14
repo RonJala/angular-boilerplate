@@ -1,1 +1,51 @@
-<p>register works!</p>
+<section>
+    <div>
+      <div>
+        <input type="text" placeholder="Name" [(ngModel)]="user.name" required />
+        <input
+          type="text"
+          placeholder="LastName"
+          [(ngModel)]="user.last_name"
+          required
+        />
+      </div>
+      <div>
+        <input
+          type="email"
+          placeholder="Email"
+          [(ngModel)]="user.email"
+          required
+        />
+        
+      </div>
+      <div>
+          <input
+          type="password"
+          placeholder="Password"
+          [(ngModel)]="user.password"
+          required
+        />
+        <input
+        id="repeatedPassword"
+          type="password"
+          placeholder="Repeat password"
+          required
+        />
+      </div>
+      <div>
+        <input
+          type="text"
+          placeholder="Image URL"
+          [(ngModel)]="user.profile_picture"
+          required
+        />
+      </div>
+    </div>
+  </section>
+  <div *ngIf="errors.length != 0">
+    <p *ngFor="let error of errors">
+      {{ error }}
+    </p>
+  </div>
+  <button (click)="register()">Registrarse</button>
+  
