@@ -22,6 +22,7 @@ export class HomeComponent {
   constructor(private service: PostService, private authService : AuthService, private router : Router) {
     this.fetchPosts();
     this.user = this.authService.getUserId();
+    
     if(!this.user){
      this.router.navigate(['/login']);
     }
