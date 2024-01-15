@@ -22,14 +22,14 @@ export class LoginComponent {
     this.service.login(this.loginUser).subscribe(
       res => {
         localStorage.setItem('currentUser', JSON.stringify(res));
-        console.log(localStorage.getItem('currentUser'));
+        //console.log(localStorage.getItem('currentUser'));
         setTimeout(() => {
           this.router.navigate(['/home']);
           
         }, 500);
       },
       err => {
-        console.log(err);
+        //console.log(err);
       }
     );
   }

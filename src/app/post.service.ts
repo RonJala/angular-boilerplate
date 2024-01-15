@@ -35,9 +35,9 @@ export class PostService {
       ? JSON.parse(localStorage.getItem('listaPosts') || '{}')
       : [];
 
-    console.log('Buscando posts con el id:', id);
+    //console.log('Buscando posts con el id:', id);
     let post = listaPosts.find((post) => post.id == id);
-    console.log(post);
+    //console.log(post);
 
     return of(listaPosts.find((post) => post.id == id));
 

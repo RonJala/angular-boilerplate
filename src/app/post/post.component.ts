@@ -35,8 +35,8 @@ export class PostComponent {
   fetchPost(){
     this.service.getPostsByID(this.id!).subscribe(
       (data: any) => {
-        console.log('Obteniendo posts...');
-        console.log(data);
+        //console.log('Obteniendo posts...');
+        //console.log(data);
         this.post = data;
       },
       (error) => {
@@ -55,11 +55,11 @@ export class PostComponent {
   actualizarPost(){
     this.service.updatePost(this.id!, this.post).subscribe(
       res => {
-        console.log(res);
+        //console.log(res);
         this.router.navigate(['/home']);
       },
       err => {
-        console.log(err);
+        //console.log(err);
       }
     );
   }
@@ -72,10 +72,10 @@ export class PostComponent {
     }
     this.service.createPost(newPost).subscribe(
       res => {
-        console.log(res);
+        //console.log(res);
       },
       err => {
-        console.log(err);
+        //console.log(err);
       }
     );
   }

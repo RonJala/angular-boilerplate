@@ -32,7 +32,7 @@ export class PerfilComponent {
       this.router.navigate(['/login']);
     }
     this.initUser();
-    console.log(this.user);
+    //console.log(this.user);
     this.fetchPosts();
   }
 
@@ -47,8 +47,8 @@ export class PerfilComponent {
     let userId = this.user!.id;
     this.postService.getPostsByUser(userId!).subscribe(
       (data: Post[]) => {
-        console.log('Obteniendo posts...');
-        console.log(data);
+        //console.log('Obteniendo posts...');
+        //console.log(data);
         this.posts = data;
       },
       (error) => {
@@ -65,12 +65,12 @@ export class PerfilComponent {
     }
     this.authService.updatePassword(this.user!.id!, this.editedUser.password).subscribe(
       res => {
-        console.log(res);
+        //console.log(res);
         alert('Contraseña actualizada');
         window.location.reload();
       },
       err => {
-        console.log(err);
+        //console.log(err);
       }
     );
   }
@@ -79,13 +79,13 @@ export class PerfilComponent {
   deletePost(id: number | undefined) {
     this.postService.deletePost(id!).subscribe(
       (res) => {
-        console.log(res);
+        //console.log(res);
           this.fetchPosts();
           window.location.reload();
 
       },
       (err) => {
-        console.log(err);
+        //console.log(err);
       }
     );
   }
@@ -93,11 +93,11 @@ export class PerfilComponent {
   actualizarDatos(){
     this.authService.updateUser(this.user!.id!, this.editedUser).subscribe(
       res => {
-        console.log(res);
+        //console.log(res);
         window.location.reload();
       },
       err => {
-        console.log(err);
+        //console.log(err);
       }
     );
   }

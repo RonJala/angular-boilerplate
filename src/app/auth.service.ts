@@ -25,7 +25,7 @@ export class AuthService {
     );
 
     if (userFound) {
-      console.log(userFound);
+      //console.log(userFound);
       return of(userFound);
     }
 
@@ -105,7 +105,7 @@ export class AuthService {
 
     localStorage.setItem('listaUsuarios', JSON.stringify(listaUsuarios));
 
-    console.log(user);
+    //console.log(user);
 
     return of(user);
 

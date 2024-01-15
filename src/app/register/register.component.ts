@@ -53,14 +53,14 @@ export class RegisterComponent {
     }
     
   
-    console.log(this.user);
+    //console.log(this.user);
     this.service.register(this.user).subscribe(
       res => {
-        console.log(res);
+        //console.log(res);
         this.router.navigate(['/login']);
          },
       err => {
-        console.log(err);
+        //console.log(err);
       }
     );
   

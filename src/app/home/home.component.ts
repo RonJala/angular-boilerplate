@@ -34,8 +34,8 @@ export class HomeComponent {
   fetchPosts(){
     this.service.getPosts().subscribe(
       (data: Post[]) => {
-        console.log('Obteniendo posts...');
-        console.log(data);
+        //console.log('Obteniendo posts...');
+        //console.log(data);
         this.posts = data;
       },
       (error) => {
@@ -52,11 +52,11 @@ export class HomeComponent {
     }
     this.service.createPost(newPost).subscribe(
       res => {
-        console.log(res);
+        //console.log(res);
         this.fetchPosts();
       },
       err => {
-        console.log(err);
+        //console.log(err);
       }
     );
     this.post.text = '';
@@ -66,14 +66,14 @@ export class HomeComponent {
   deletePost(id : number | undefined){
     this.service.deletePost(id!).subscribe(
       res => {
-        console.log(res);
+        //console.log(res);
         this.fetchPosts();
         if(res == 204){
           this.fetchPosts();
         }
       },
       err => {
-        console.log(err);
+        //console.log(err);
       }
     );
   }
