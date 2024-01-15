@@ -28,6 +28,9 @@ export class PerfilComponent {
     private router : Router
   ) {
     this.user = this.authService.getCurrentUser();
+    if(!this.user){
+      this.router.navigate(['/login']);
+    }
     this.initUser();
     console.log(this.user);
     this.fetchPosts();
@@ -80,6 +83,18 @@ export class PerfilComponent {
           this.fetchPosts();
       },
       (err) => {
+        console.log(err);
+      }
+    );
+  }
+
+  actualizarDatos(){
+    this.authService.updateUser(this.user!.id!, this.editedUser).subscribe(
+      res => {
+        console.log(res);
+        window.location.reload();
+      },
+      err => {
         console.log(err);
       }
     );

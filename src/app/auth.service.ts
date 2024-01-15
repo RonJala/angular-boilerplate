@@ -10,6 +10,8 @@ export class AuthService {
 
   constructor(private http : HttpClient) { }
 
+
+
   login(body : LoginUser){
     let user : LoginUser = {
       email: body.email,
@@ -55,6 +57,10 @@ export class AuthService {
       password: password
     }
     return this.http.put(`http://127.0.0.1:8000/api/users/${id}/passwordReset`, user);
+  }
 
+  updateUser(id : number, user : User){
+    console.log(user);
+    return this.http.put(`http://127.0.0.1:8000/api/users/${id}`, user);
   }
 }

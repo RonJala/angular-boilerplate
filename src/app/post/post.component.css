@@ -1,0 +1,37 @@
+div {
+    padding: 24px;
+    display: flex;
+    gap: 8px;
+  }
+  
+  div div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  div div p {
+    margin: 0;
+  }
+  
+  div div input {
+    flex: 1;
+    padding: 8px 16px;
+    border: 1px solid #b4b4b4;
+    border-radius: 4px;
+  }
+  
+  div:last-of-type {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  div:last-of-type button {
+    background-color: rgb(224, 110, 69);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+  }
+  

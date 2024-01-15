@@ -1,1 +1,17 @@
-<p>post works!</p>
+<div>
+    <div>
+        <p>Titulo</p>
+    <input type="text" [(ngModel)]="post.text" placeholder="Titulo">
+    
+    </div>
+    <div>
+        <p>URL de la imagen</p>
+        <input type="text" [(ngModel)]="post.image_url" placeholder="Cuerpo">
+    
+    </div>
+    </div>
+    
+    <div>
+        <button *ngIf="!id" (click)="createPost()">Crear post </button>
+    <button *ngIf="id" (click)="actualizarPost()">Actualizar post </button>
+    </div>

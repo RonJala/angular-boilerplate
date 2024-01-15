@@ -79,3 +79,24 @@ button {
     display: flex;
     gap: 8px;
 }
+
+img{
+    max-width: 512px;
+    max-height: 512px;
+    margin-bottom: 48px;
+}
+
+.perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    overflow: hidden;
+}
+.perfil img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid #b4b4b4;
+}
