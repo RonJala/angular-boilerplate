@@ -34,7 +34,7 @@ export class PostComponent {
 
   fetchPost(){
     this.service.getPostsByID(this.id!).subscribe(
-      (data: Post) => {
+      (data: any) => {
         console.log('Obteniendo posts...');
         console.log(data);
         this.post = data;

@@ -66,6 +66,7 @@ export class HomeComponent {
     this.service.deletePost(id!).subscribe(
       res => {
         console.log(res);
+        this.fetchPosts();
         if(res == 204){
           this.fetchPosts();
         }

@@ -81,6 +81,8 @@ export class PerfilComponent {
       (res) => {
         console.log(res);
           this.fetchPosts();
+          window.location.reload();
+
       },
       (err) => {
         console.log(err);
