@@ -5,4 +5,6 @@ export interface User {
     email: string;
     password: string;
     profile_picture?: string; // URL de la foto de perfil (opcional)
+    created_at?: string; // Fecha de creación (opcional, ya que podría ser asignado por el servidor)
+    updated_at?: string; // Fecha de actualización (opcional, ya que podría ser asignado por el servidor)
   }

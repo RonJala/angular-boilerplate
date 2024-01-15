@@ -58,6 +58,8 @@ export class HomeComponent {
         console.log(err);
       }
     );
+    this.post.text = '';
+    this.post.image_url = '';
   }
 
   deletePost(id : number | undefined){
