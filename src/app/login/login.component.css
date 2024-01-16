@@ -7,11 +7,25 @@ input{
     width: clamp(100px, 50%, 200px);
 }
 div{
+    margin-top: 180px;
     display: flex;
     flex-direction: column;
     gap: 16px;
     justify-content: center;
     align-items: center;
+}
+
+.form{
+    width: 50%;
+    margin-top: 0;
+    padding: 40px 80px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    border: #b4b4b4 1px solid;
 }
 
 button{

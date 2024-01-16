@@ -29,6 +29,7 @@ export class LoginComponent {
         }, 500);
       },
       err => {
+        alert('Error al iniciar sesion, intenta de nuevo');
         //console.log(err);
       }
     );

@@ -1,8 +1,13 @@
-
 <div>
-    <input type="text" placeholder="Email" [(ngModel)]="loginUser.email" >
-<input type="password" placeholder="Password" [(ngModel)]="loginUser.password" >
-<button (click)="login()" >Login</button>
+  <div class="form">
+    <input type="text" placeholder="Email" [(ngModel)]="loginUser.email" />
+  <input
+    type="password"
+    placeholder="Password"
+    [(ngModel)]="loginUser.password"
+  />
+  <button (click)="login()">Login</button>
 
-<button (click)="resetData()" >Reset data</button>
+  <button (click)="resetData()">Reset data</button>
+  </div>
 </div>

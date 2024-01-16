@@ -94,6 +94,7 @@ export class PerfilComponent {
     this.authService.updateUser(this.user!.id!, this.editedUser).subscribe(
       res => {
         //console.log(res);
+        alert('Datos actualizados');
         window.location.reload();
       },
       err => {

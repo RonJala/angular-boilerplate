@@ -49,13 +49,14 @@ export class PostService {
       text: post.text,
       image_url: post.image_url,
     };
-
     let listaPosts: Post[] = localStorage.getItem('listaPosts')
       ? JSON.parse(localStorage.getItem('listaPosts') || '{}')
       : [];
 
-    listaPosts[id].text = post.text;
-    listaPosts[id].image_url = post.image_url;
+    let index = listaPosts.findIndex((post) => post.id == id);
+
+    listaPosts[index].text = post.text;
+    listaPosts[index].image_url = post.image_url;
 
     localStorage.setItem('listaPosts', JSON.stringify(listaPosts));
 
@@ -65,7 +66,9 @@ export class PostService {
   }
 
   createPost(body: Post) {
-    let post = {
+
+
+    let post : Post = {
       text: body.text,
       image_url: body.image_url,
       user_id: body.user_id,
@@ -74,6 +77,10 @@ export class PostService {
     let listaPosts: Post[] = localStorage.getItem('listaPosts')
       ? JSON.parse(localStorage.getItem('listaPosts') || '{}')
       : [];
+
+    //get the last id from the list
+    let lastId = listaPosts[listaPosts.length - 1].id;
+    post.id = lastId! + 1;
 
     listaPosts.push(post);
 

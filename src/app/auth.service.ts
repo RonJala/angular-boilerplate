@@ -98,10 +98,14 @@ export class AuthService {
     let listaUsuarios : User[]  = localStorage.getItem('listaUsuarios') ? JSON.parse(localStorage.getItem('listaUsuarios') || '{}') : [];
 
     let foundUser = listaUsuarios.find((user) => user.id == id);
+    let foundUserIndex = listaUsuarios.findIndex((user) => user.id == id);
 
     foundUser!.name = user.name;
     foundUser!.last_name = user.last_name;
     foundUser!.profile_picture = user.profile_picture;
+
+    listaUsuarios[foundUserIndex] = foundUser!;
+    
 
     localStorage.setItem('listaUsuarios', JSON.stringify(listaUsuarios));
 

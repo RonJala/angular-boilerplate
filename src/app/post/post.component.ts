@@ -59,6 +59,7 @@ export class PostComponent {
         this.router.navigate(['/home']);
       },
       err => {
+        alert('Error al actualizar el post, intenta de nuevo');
         //console.log(err);
       }
     );
