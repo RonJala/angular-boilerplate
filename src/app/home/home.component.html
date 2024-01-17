@@ -3,7 +3,7 @@
     <h1>Red social Jala</h1>
     <section>
       <h2>¿Qué estás pensando?</h2>
-      <div>
+      <div class="queestaspensando">
         <input type="text"
          [(ngModel)]="post.text" 
          placeholder="Titulo" />
@@ -26,7 +26,7 @@
               X
             </button>
           </div>
-          <img src="{{ post.image_url }}" alt="imagen del post" />
+          <img *ngIf=post.image_url src="{{ post.image_url }}" alt="imagen del post" />
         </div>
       </div>
     </section>

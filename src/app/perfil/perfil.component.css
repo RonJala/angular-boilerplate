@@ -100,3 +100,12 @@ img{
     object-fit: cover;
     border: 1px solid #b4b4b4;
 }
+
+@media screen and (max-width: 600px) {
+    .form{
+        div{
+            flex-direction: column;
+        }
+    }
+    
+}
